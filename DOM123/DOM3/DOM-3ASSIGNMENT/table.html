@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        th, td{
+            padding: 10px 20px;
+            border: 1px solid rgb(12, 12, 12);
+        }
+    </style>
+
+</head>
+<body id="body">
+
+   
+</body>
+</html>
+
+
+<script>
+    
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+// Adding the entire table to the body tag
+document.getElementById('body').appendChild(table);
+// Creating and adding data to first row of the table
+let row_1 = document.createElement('tr');
+let heading_1 = document.createElement('th');
+heading_1.innerHTML = "Name";
+let heading_2 = document.createElement('th');
+heading_2.innerHTML = "Science";
+let heading_3 = document.createElement('th');
+heading_3.innerHTML = "Math";
+let heading_4 = document.createElement('th');
+heading_4.innerHTML = "English";
+
+row_1.appendChild(heading_1);
+row_1.appendChild(heading_2);
+row_1.appendChild(heading_3);
+row_1.appendChild(heading_4);
+thead.appendChild(row_1);
+
+
+// Creating and adding data to second row of the table
+let row_2 = document.createElement('tr');
+let row_2_data_1 = document.createElement('td');
+row_2_data_1.innerHTML = "Narupul";
+let row_2_data_2 = document.createElement('td');
+row_2_data_2.innerHTML = "100";
+let row_2_data_3 = document.createElement('td');
+row_2_data_3.innerHTML = "100";
+let row_2_data_4 = document.createElement('td');
+row_2_data_4.innerHTML = "100";
+
+row_2.appendChild(row_2_data_1);
+row_2.appendChild(row_2_data_2);
+row_2.appendChild(row_2_data_3);
+row_2.appendChild(row_2_data_4);
+tbody.appendChild(row_2);
+
+
+
+</script>

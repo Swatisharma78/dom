@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #container{
+            height: 700px ;
+            width: 500px;
+            /* border: 1px solid red; */
+            margin: auto;
+        }
+        #a{
+            height: 120px;
+            width: 500px;
+            display: flex;
+        }
+        #m{
+            height: 120px;
+            width: 200px;
+            /* border: 1px solid red; */
+        }
+        #n{
+            height: 120px;
+            width: 200px;
+            /* border: 1px solid red; */
+            margin-left: 100px;
+        }
+        #b{
+            height: 60px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            font-size:x-large;
+            background-color: red;
+            
+        }
+        
+        #c{
+            height: 60px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            font-size:x-large;
+            background-color: green;
+        }
+        #score{
+            height: 90px;
+            width: 240px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            
+             margin-left: 130px;
+            margin-top: -25px;
+            margin-bottom: 20px;
+             background-color: rgb(194, 193, 193);
+            font-size: 40px;
+            font-weight: bold;
+             /* padding-left: 110px; */
+            padding-top:20px;
+            
+        }
+      
+        #Keyboard{
+            display: grid;
+            grid-template-columns: 70px 70px 70px ;
+            grid-template-rows: 70px 70px 70px 70px  ;
+            gap: 20px;
+            margin-left: 127px;
+        }
+        #Keyboard>div{
+            border: 1px solid black;
+            /* margin-left: 70px; */
+        }
+        #Keyboard>div:nth-child(10){
+            border: 1px white solid;
+        }
+        #d{
+            color: white;
+            background-color:black;
+            height: 70px;
+            width: 255px;
+            font-size: xx-large;
+            margin-left: 125px;
+            margin-top: 20px;
+        }
+        /* h1{
+            margin-top: -2px;
+        } */
+        .f,.g{
+            margin-top: -2px;
+            margin-left: 70px;
+        }
+        #r{
+            margin-top: -2px;
+            margin-left: 200px;
+        }
+        p{
+            font-size:xx-large ;
+            margin-top: -1px;
+            margin-top: 5px;
+        }
+        .green{
+            font-size:xx-large;
+            background-color: green;
+            padding-left: 23px;
+            padding-top:15px ;
+        }
+        .orange{
+            font-size:xx-large;
+            background-color: orange;
+            padding-left: 23px;
+            padding-top:15px ;
+            
+        }
+        .violet{
+            font-size:xx-large;
+            background-color: rgb(65, 8, 65);
+            padding-left: 23px;
+            padding-top:15px ;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- parent div -->
+    <div id="container" style="border:2px solid black">
+        <!-- 1st child -->
+        <div id="a"  >
+            <!-- min child -->
+            <div id="m"  style="border:2px solid rgb(55, 24, 255)">
+                <div id="b">
+                    <p>43</p>
+                </div>
+                <h1 class="f">MIN</h1>
+            </div>
+            <!-- max child -->
+            <div id="n">
+                <div id="c">
+                   <p>2019 </p> 
+                </div>
+                <h1 class="g">MAX</h1>
+
+            </div>
+
+        </div>
+    <h1 id="r">SCORE</h1>
+    <div id="score">
+        <!-- <h1 class="num"> </h1> -->
+    </div>
+    <div id="Keyboard">
+        <div id="box-1" class="green" onclick="press(1);">1</div>
+        <div id="box-2" class="orange" onclick="press(2);">2</div>
+        <div id="box-3" class="green" onclick="press(3);">3</div>
+        <div id="box-4" class="orange" onclick="press(4);">4</div>
+        <div id="box-5" class="orange" onclick="press(5);">5</div>
+        <div id="box-6" class="orange" onclick="press(6);">6</div>
+        <div id="box-7" class="green" onclick="press(7);">7</div>
+        <div id="box-8" class="orange" onclick="press(8);">8</div>
+        <div id="box-9" class="green" onclick="press(9);">9</div>
+        <div></div>
+        <div id="box-0" class="violet" onclick="press(0);">0</div>
+        
+    </div>
+    <div>
+        <button id="d" onclick="setScore()">ENTER</button>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    var bag="";
+    var max = 2019;
+    var min = 43;
+    function press(a){
+        bag = bag +a;
+        console.log(bag)
+        document.querySelector("#score").innerText=bag;
+    }
+
+    function setScore(){
+        if(Number(bag)>max){
+            max=bag;
+            document.querySelector("#c").innerText=max;
+        }
+
+        if(Number(bag)<min){
+            min=bag;
+            document.querySelector("#b").innerText=min;
+        }
+
+        bag="";
+        document.querySelector("#score").innerText="#";
+    }
+
+</script>

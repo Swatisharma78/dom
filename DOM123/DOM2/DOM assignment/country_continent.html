@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+           
+            height: 35px; 
+            border: 1px solid #21cc4e; 
+            background-color: #21cc4e; 
+            color: white; 
+            border-Radius: 5px;
+        }
+        .slct{
+            width:110px; 
+            height: 30px;  
+            border-Radius : 10px;
+        }
+
+    </style>
+</head>
+<body>
+   
+      <ul>
+         <li>
+            <button>India</button><br></br>
+            <li>
+                <button>United States of America</button><br></br>
+               
+             </li>
+            <li>
+                <button>Nepal</button><br></br>
+            </li>
+            <li>
+                <button>Australia</button><br></br>
+            </li>
+            <li>
+                <button>France</button><br></br>
+            </li>
+            <li>
+                <button>Germany</button><br></br>
+            </li>
+            <li>
+                <button>South Africa</button><br></br>
+            </li>
+            <li>
+                <button>Nigeria</button><br></br>
+            </li>
+            <li>
+                <button>Mexico</button><br></br>
+            </li>
+            <li>
+                <button>Argentina</button><br></br>
+            </li>
+            <li>
+                <button>Brazil</button><br></br>
+            </li>
+            <li>
+                <button>Canada</button><br></br>
+            </li>
+            <li>
+                <button>Singapore</button><br></br>
+            </li>
+            <li>
+                <button>Sweden</button><br></br>
+            </li>  
+         </li>
+        
+     </ul>     
+    
+  
+    
+
+    <select id ="continent_select" class="slct">
+        <option value="" >Select Option </option>
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+       
+    </select>
+    <button onclick="btn()"  class ="btn">Find Continent</button>
+</body>
+</html>
+<script>
+    function btn(){
+        var text;
+         var contains = document.getElementById("continent_select").value; 
+
+         switch(contains) 
+         {
+            case "India":
+            text = "The continent is Asia";
+                alert(text); 
+            break;
+
+            case "United States of America":
+            text = "The continent is North and Central America";
+            alert(text);
+            break;
+
+            case "China":
+            text = "The continent is Asia";
+            alert(text);
+            break;
+
+            case "Nepal":
+            text = "The continent is Asia";
+            alert(text);
+            break;
+
+            case "Australia":
+            text = "The continent is Oceania";
+            alert(text);
+            break;
+
+            case "France":
+            text = "The continent is Europe";
+            alert(text);
+            break;
+
+            case "Germany":
+            text = "The continent is Europe";
+            alert(text);
+            break;
+
+            case "South Africa":
+            text = "The continent is Africa";
+            alert(text)
+            break;
+
+            case "Nigeria":
+            text = "The continent is Africa";
+            alert(text)
+            break;
+
+            case "Mexico":
+            text = "The continent is North and Central America";
+            alert(text);
+            break;
+
+            case "Argentina":
+            text = "The continent is South America";
+            alert(text)
+            break;
+
+            case "Brazil":
+            text = "The continent is South America";
+            alert(text);
+            break;
+
+            case "Canada":
+            text = "The continent is North and Central America";
+            alert(text);
+            break;
+
+            case "Singapore":
+            text = "The continent is Asia";
+            alert(text);
+            break;
+
+            case "Sweden":
+            text = "The continent is Europe";
+            alert(text);
+            break;
+
+    
+            default:
+            text = "Something is Wrong..";
+            alert(text);
+         } 
+    }
+</script>
